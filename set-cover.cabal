@@ -2,7 +2,7 @@ name:                   set-cover
 version:                0.0.0.1
 stability:              experimental
 
-cabal-version:          >= 1.2
+cabal-version:          >= 1.6
 build-type:             Simple
 
 author:                 James Cook <mokus@deepbondi.net>
@@ -15,11 +15,15 @@ synopsis:               Algorithms for the set covering problem
 description:            Brute-force exact solution and greedy approximate solution 
                         for the set covering problem.
 
+source-repository head
+  type: git
+  location: git://github.com/mokus0/set-cover.git
+
 Library
   hs-source-dirs:       src
   ghc-options:          -fwarn-unused-imports -fwarn-unused-binds -fwarn-type-defaults
   exposed-modules:      Math.SetCover
-  build-depends:        base >= 3,
+  build-depends:        base >= 3 && < 5,
                         bimap,
                         bitvec,
                         containers,
